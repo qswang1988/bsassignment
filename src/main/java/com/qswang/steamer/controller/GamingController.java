@@ -22,7 +22,6 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/gaming")
 public class GamingController {
-
     private static final Logger logger = LoggerFactory.getLogger(GamingController.class);
     private BridgeService bridgeService;
     private GameService gameService;
@@ -78,7 +77,7 @@ public class GamingController {
         memcachedService.createRecord(String.valueOf(playerId), cachedObject);
         // update link in db
         playerService.updateLastLink(playerId,gameId);
-        logger.info("player game linked: "+playerId + ","+gameId);
+        //logger.info("player game linked: "+playerId + ","+gameId);
         return ResponseEntity.ok("success");
     }
 
@@ -92,7 +91,7 @@ public class GamingController {
     public ResponseEntity<String> searchOnlinePlayers(@PathVariable(name="game") int gameId, @PathVariable(name="region") int regionId, @RequestParam(name="level") int levelId){
         logger.info(String.format("searching online players, gameId: %s, regionId: %s, levelId: %s",gameId,regionId,levelId));
         Optional<Game> game = gameService.findById(gameId);
-        Optional<Region> region  = regionService.findById(regionId);
+        Optional<Region> region = regionService.findById(regionId);
         Optional<Level> level  = levelService.findById(levelId);
         if(level.isEmpty()||game.isEmpty()||region.isEmpty())
             return new ResponseEntity<>("searching conditions are out of range",HttpStatus.NO_CONTENT);
@@ -118,8 +117,8 @@ public class GamingController {
 
     @ApiIgnore
     @GetMapping("/rejection")
-    public int rejection(){
-        return HttpStatus.BAD_REQUEST.value();
+    public ResponseEntity<String> rejection(){
+        return new ResponseEntity<>("rejection",HttpStatus.BAD_REQUEST);
     }
 
     @Autowired
@@ -152,5 +151,3 @@ public class GamingController {
         this.levelService = levelService;
     }
 }
-
-

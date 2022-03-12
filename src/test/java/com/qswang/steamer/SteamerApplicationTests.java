@@ -16,9 +16,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-
 import java.util.*;
-
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
@@ -53,11 +51,9 @@ class SteamerApplicationTests {
             p.setLastLinkGame(-1);
             p.setLastLinkDate(null);
             playerService.updatePlayer(p);
-            //memcachedService.deleteRecord(String.valueOf(p.getPlayerId()));
         }
         memcachedService.clear();
     }
-
 
     // link gamer to a game
     @Test
@@ -91,7 +87,7 @@ class SteamerApplicationTests {
         int regionId = region.get().getRegionId();
         Level level = null;
         List<Player> players = new ArrayList<>();
-        Set<Long> inserted = new HashSet<>();
+        Set<Long> inserted = new HashSet<>();// prevent repetition
         for(int i = 0;i<50;i++){
             Optional<Player> p = playerService.findById(random.nextInt(300)+1);
             if(p.isEmpty() || inserted.contains(p.get().getPlayerId()))
@@ -134,7 +130,7 @@ class SteamerApplicationTests {
         int gameId = game.get().getGameId();
         Level level = null;
         List<Player> players = new ArrayList<>();
-        Set<Long> inserted = new HashSet<>();
+        Set<Long> inserted = new HashSet<>(); // prevent repetition
         for(int i = 0;i<50;i++){
             Optional<Player> p = playerService.findById(random.nextInt(300)+1);
             if(p.isEmpty() || inserted.contains(p.get().getPlayerId()))

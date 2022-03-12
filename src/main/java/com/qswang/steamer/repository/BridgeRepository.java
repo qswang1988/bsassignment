@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface BridgeRepository extends JpaRepository<PlayerGameLevelBridge,Long> {
-    //@Query("select bridge from PlayerGameLevelBridge bridge where bridge.playerId = :player and bridge.gameId = :game")
     List<PlayerGameLevelBridge> findByPlayerIdAndGameId(@Param("player")long playerId, @Param("game")int gameId);
     @Modifying
     @Transactional

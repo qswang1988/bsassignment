@@ -29,8 +29,6 @@ public class BridgeServiceImpl implements BridgeService {
     @Autowired
     private PlayerRepository playerRepository;
     @Autowired
-    private LevelRepository levelRepository;
-    @Autowired
     private LevelService levelService;
 
     @Value("${steamer.initial-score}")

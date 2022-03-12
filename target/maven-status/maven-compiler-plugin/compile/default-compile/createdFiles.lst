@@ -15,8 +15,6 @@ com/qswang/steamer/memcached/MemcachedServiceImpl.class
 com/qswang/steamer/service/LevelService.class
 com/qswang/steamer/model/Level.class
 com/qswang/steamer/model/Game.class
-com/qswang/steamer/service/config/LevelsConfig.class
-META-INF/spring-configuration-metadata.json
 com/qswang/steamer/service/RegionService.class
 com/qswang/steamer/controller/GamingController.class
 com/qswang/steamer/service/PlayerService.class

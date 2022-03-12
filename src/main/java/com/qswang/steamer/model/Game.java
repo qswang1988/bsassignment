@@ -1,6 +1,7 @@
 package com.qswang.steamer.model;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class Game implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int gameId;
 
+    @NotNull
     @JSONField(name="GAME_NAME")
     private String gameName;
     @JSONField(name="MIN_PLAYER")

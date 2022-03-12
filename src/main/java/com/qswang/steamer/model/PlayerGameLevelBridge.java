@@ -1,6 +1,7 @@
 package com.qswang.steamer.model;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,15 +19,19 @@ public class PlayerGameLevelBridge {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bridgeId;
 
+    @NotNull
     @JSONField(name="PLAYER")
     private long playerId;
 
+    @NotNull
     @JSONField(name="GAME")
     private int gameId;
 
+    @NotNull
     @JSONField(name="LEVEL")
     private int levelId;
 
+    @NotNull
     @JSONField(name="SCORE")
     private int score;
 }

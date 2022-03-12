@@ -7,7 +7,6 @@ import com.qswang.steamer.model.Level;
 import com.qswang.steamer.model.Player;
 import com.qswang.steamer.model.Region;
 import com.qswang.steamer.service.*;
-import com.qswang.steamer.service.config.LevelsConfig;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -31,8 +30,6 @@ public class InitializeSteamer {
     PlayerService playerService;
     @Autowired
     RegionService regionService;
-    @Autowired
-    LevelsConfig levelsConfig;
     @Autowired
     GamingController gamingController;
 

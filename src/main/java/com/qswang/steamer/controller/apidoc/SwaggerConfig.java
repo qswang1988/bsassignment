@@ -24,7 +24,6 @@ public class SwaggerConfig {
                 .build();
     }
 
-
     public ApiInfo apiInfo(){
         Contact contact = new Contact("Qiushi.Wang", "https://www.linkedin.com/in/qiushi-wang-006b40205/", "qswang1988@gmail.com");
         return new ApiInfo(
