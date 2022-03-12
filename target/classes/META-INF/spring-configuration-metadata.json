@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "steamer.levels",
+      "type": "com.qswang.steamer.service.config.LevelsConfig",
+      "sourceType": "com.qswang.steamer.service.config.LevelsConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "steamer.levels.levels",
+      "type": "java.util.Map<java.lang.String,java.lang.Integer>",
+      "sourceType": "com.qswang.steamer.service.config.LevelsConfig"
+    }
+  ],
+  "hints": []
+}

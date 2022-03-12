@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/steamer;AUTO_SERVER=TRUE
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true
+
+steamer:
+  initial-score: 0
+  levels:
+    noob: 0
+    pro: 1000
+    invicible: 2000
+    god: 3000
+
+memcached:
+  ip: 127.0.0.1
+  port: 11211
+  exptime: 1800
