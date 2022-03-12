@@ -12,7 +12,7 @@ A directory of gamers, their geography, which games they play and the level(INVI
 - Memcached : Where players registering their real-time status and which game they are in. The in-memory key-value storage can prevent database from frequent and intense access. Player's status and gaming rooms can be built in Memcahced. 
 - Swagger2:  http://localhost:8080/swagger-ui.html
 - Spring Data JPA: data accessing
-- 
+- Servlet Filter : for Injection prevention. I didn't use native sql query or any concatenate query, tut it is necessary to filter out any suspicious requests at the first place. 
 
 # API:
 - link gamer to a game.
@@ -39,7 +39,8 @@ git clone https://github.com/qswang1988/bsassignment.git
 </code>
 
 ## run application
-Please make sure you have <strong>Memcached</strong> running on port 11211 in local or remote(need to modify ip in application.yml) environment, otherwise the api for searching online-players wouldn't work. 
+
+* Please make sure you have <strong>Memcached</strong> running on port 11211 in local or remote(need to modify ip in application.yml) environment, otherwise the api for searching online-players wouldn't work. 
 
 You can use docker to it in a container.
 
