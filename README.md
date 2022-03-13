@@ -42,7 +42,7 @@ git clone https://github.com/qswang1988/bsassignment.git
 
 * Please make sure you have <strong>Memcached</strong> running on port 11211 in local or remote(need to modify ip in application.yml) environment, otherwise the api for searching online-players wouldn't work. 
 
-You can use docker to it in a container.
+You can use docker to run it in a container.
 
 <code>docker pull memcached</code>
 
