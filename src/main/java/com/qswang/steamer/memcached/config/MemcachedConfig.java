@@ -21,7 +21,7 @@ public class MemcachedConfig {
     @Value("${memcached.port}")
     private String port;
 
-    @Bean()
+    @Bean
     public MemcachedClient getClient() throws IOException {
         logger.info("memcached client initialized");
         return new MemcachedClient(new InetSocketAddress(ip,Integer.valueOf(port)));
