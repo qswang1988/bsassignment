@@ -10,7 +10,6 @@ import com.qswang.steamer.service.*;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-
 import javax.annotation.PostConstruct;
 import java.util.Optional;
 import java.util.Random;
