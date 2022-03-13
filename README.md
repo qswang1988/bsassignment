@@ -15,19 +15,19 @@ A directory of gamers, their geography, which games they play and the level(INVI
 - Servlet Filter : for Injection prevention. I didn't use native sql query or any concatenate query, tut it is necessary to filter out any suspicious requests at the first place. 
 
 # API:
-- link gamer to a game.
-  post request: /gaming/linkgame/{gameid}
-  parameter: player
+- link gamer to a game.  
+  post request: /gaming/linkgame/{gameid}  
+  parameter: player  
   example post request: http://localhost:8080/gaming/linkgame/3?player=201
 
-- search for players of a specific game who are online and ready for matching
-  get request: {game}/onlineplayers/{region}
-  parameter: level
+- search for players of a specific game who are online and ready for matching  
+  get request: {game}/onlineplayers/{region}  
+  parameter: level  
   example get request: http://localhost:8080/gaming/3/onlineplayers/2?level=1
 
-- Search for players of a game based on players' level.
-  get request: {game}/players
-  parameter: level
+- Search for players of a game based on players' level.  
+  get request: {game}/players  
+  parameter: level  
   example request: http://localhost:8080/gaming/2/players?level=3
 
 # How to run:
